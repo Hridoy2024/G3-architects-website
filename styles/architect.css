@@ -79,7 +79,7 @@ main > section {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: 0 auto;
 }
 
@@ -95,11 +95,12 @@ main > section {
 
 .navbar,
 .banner,
-main {
+main,
+footer {
   width: 90%;
   /* max-width: 1440px; */
   margin: 0 auto;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 /* banner styles */
 
@@ -157,6 +158,63 @@ main {
   margin-bottom: 32px;
 }
 
+/* feature section */
+
+.features {
+  max-width: 1440px;
+  gap: 100px;
+}
+
+.features-content {
+  width: 50%;
+}
+
+.features-img {
+  width: 50%;
+  /* margin-bottom: 5px; */
+}
+
+.features-img img {
+  width: 100%;
+}
+
+.feature-card {
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.feature-card .feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#feature-p{
+  margin-top: 30px;
+}
+
+#ex-badge {
+  padding: 25px 22px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -70px;
+  margin-top: -80px;
+}
+
+#ex-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
 /* some facts */
 
 .facts-container {
@@ -206,13 +264,25 @@ main {
   filter: grayscale(100%);
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff4e7;
+  height: 100px;
+  margin-top: 130px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
 /* responsive */
 
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
   .teams,
-  .facts-container {
+  .facts-container,
+  .features {
     flex-direction: column;
   }
 
@@ -234,12 +304,8 @@ main {
   }
 
   .sponsor-companies {
-    /* justify-content: center; */
     gap: 40px;
     justify-items: center;
-    /* margin-left: 100%; */
-
-    /* display: flex; */
   }
 
   .fact-description {
@@ -248,12 +314,22 @@ main {
   .fact-card {
     width: 100%;
   }
+
+  .features-img {
+    justify-content: center;
+  }
+
+  #ex-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
 }
 
 /* medium size device */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
   }
 
@@ -272,4 +348,20 @@ main {
     gap: 50px;
     justify-items: center;
   }
+
+  #ex-badge {
+    margin-top: 20px;
+    margin-left: 250px;
+ 
+  }
+
+  .features-img{
+    width: 100%;
+  }
+
+  .feature-card{
+    width: 100%;
+  }
+
+
 }
